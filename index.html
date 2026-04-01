@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyОбраз - Безшовний бюстгальтер</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#ffeef4; color:#333;}
+  .container { max-width: 400px; margin:20px auto; background:#fff; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,0.2); overflow:hidden;}
+  img { width:100%; object-fit:cover; border-radius:20px 20px 0 0;}
+  h1, h2 { text-align:center; margin:10px 0;}
+  .description { text-align:center; color:#555; margin:0 20px 10px 20px;}
+  .price { text-align:center; font-size:28px; color:#ff0080; font-weight:bold; margin:10px 0;}
+  .section { padding:20px;}
+  .advantages, .reviews { display:flex; flex-direction:column; gap:15px; }
+  .adv-item, .review-item { background:#ffeef4; padding:10px; border-radius:12px; text-align:center;}
+  form { display:flex; flex-direction:column; gap:10px; padding:20px;}
+  input, button { padding:12px; border-radius:12px; border:1px solid #ccc; font-size:16px;}
+  button { background:#ff0080; color:#fff; border:none; cursor:pointer; transition:0.3s;}
+  button:hover { background:#e60073;}
+  .footer { text-align:center; font-size:12px; color:#999; padding:10px;}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="https://via.placeholder.com/400x300.png?text=%D0%91%D1%8E%D1%81%D1%82%D0%B3%D0%B0%D0%BB%D1%8C%D1%82%D0%B5%D1%80" alt="Бюстгальтер">
+  <h1>Безшовний бюстгальтер</h1>
+  <p class="description">Комфортний, стильний та ідеально сідає по фігурі. Підходить на кожен день.</p>
+  <div class="price">989 грн</div>
+</div>
+
+<div class="container section">
+  <h2>Переваги товару</h2>
+  <div class="advantages">
+    <div class="adv-item">✅ Безшовний – не помітний під одягом</div>
+    <div class="adv-item">✅ Комфорт на весь день</div>
+    <div class="adv-item">✅ Підходить для будь-якого розміру</div>
+    <div class="adv-item">✅ Легка тканина, дихає</div>
+  </div>
+</div>
+
+<div class="container section">
+  <h2>Відгуки клієнтів</h2>
+  <div class="reviews">
+    <div class="review-item">Марія: "Сідав ідеально, дуже зручно!"</div>
+    <div class="review-item">Олена: "Люблю тканину, дуже приємна до тіла."</div>
+  </div>
+</div>
+
+<div class="container section">
+  <h2>Доставка та гарантія</h2>
+  <p class="description">Швидка доставка по Україні. Обмін або повернення протягом 14 днів.</p>
+</div>
+
+<div class="container section">
+  <h2>Замовити зараз</h2>
+  <form id="orderForm">
+    <input type="text" id="name" placeholder="Ваше ім’я" required>
+    <input type="tel" id="phone" placeholder="Ваш телефон" required>
+    <button type="submit">Замовити через Telegram</button>
+  </form>
+</div>
+
+<div class="footer">© EasyОбраз | Швидка доставка по Україні</div>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const message = `Замовлення EasyОбраз:%0AІм’я: ${name}%0AТелефон: ${phone}%0AТовар: Бюстгальтер - 989 грн`;
+  window.open(`https://t.me/YOUR_USERNAME?text=${message}`, "_blank");
+});
+</script>
+
+</body>
+</html>
